@@ -19,7 +19,7 @@ body = {
             "keywords": ["나이키운동화"]
         }
     ],
-    "device": "pc","mobile"
+    "device": ""
     "ages": [],
     "gender": ""
 }
