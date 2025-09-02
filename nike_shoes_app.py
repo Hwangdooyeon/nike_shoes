@@ -19,7 +19,7 @@ body = {
             "keywords": ["나이키운동화"]
         }
     ],
-    "device": "pc",
+    "device": "all",
     "ages": [],
     "gender": ""
 }
@@ -59,6 +59,6 @@ df = pd.DataFrame({
 df = df.set_index('날짜')
 
 # 📌 Streamlit 시각화
-st.title("📈 나이키운동화 검색어 트렌드 (2025년 8월)")
+st.title("나이키운동화 검색어 트렌드 (2025년 8월)")
 st.dataframe(df, use_container_width=True)
 st.line_chart(df)
