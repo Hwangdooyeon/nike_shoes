@@ -59,6 +59,11 @@ df = pd.DataFrame({
 df = df.set_index('날짜')
 
 # 📌 Streamlit 시각화
+# https://docs.streamlit.io/ 제목 서식에 텍스트를 표시
 st.title("나이키운동화 검색어 트렌드 (2025년 8월)")
+
+# https://docs.streamlit.io/ st.데이터프레임 테이블로 표시
 st.dataframe(df, use_container_width=True)
+
+# https://docs.streamlit.io/ 선형 차트를 표시합니다.
 st.line_chart(df)
