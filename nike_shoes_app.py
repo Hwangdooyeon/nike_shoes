@@ -4,11 +4,11 @@ import pandas as pd
 import json
 import urllib.request
 
-# 📌 NAVER API 인증 정보
+# NAVER API 인증 정보
 client_id = "q3Yd8CQkM7oHlqOzMeQL"
 client_secret = "hGWoNfAcAD"
 
-# 📌 요청 바디 구성 (나이키운동화 + 2025년 8월 일별)
+#  요청 바디 구성 (나이키운동화 + 2025년 8월 일별)
 body = {
     "startDate": "2025-08-01",
     "endDate": "2025-08-31",
@@ -25,14 +25,14 @@ body = {
 }
 body_str = json.dumps(body)
 
-# 📌 요청 구성
+#  요청 구성
 url = "https://openapi.naver.com/v1/datalab/search"
 request = urllib.request.Request(url)
 request.add_header("X-Naver-Client-Id", "q3Yd8CQkM7oHlqOzMeQL")
 request.add_header("X-Naver-Client-Secret", "hGWoNfAcAD")
 request.add_header("Content-Type", "application/json")
 
-# 📌 API 호출
+#  API 호출
 try:
     response = urllib.request.urlopen(request, data=body_str.encode("utf-8"))
     rescode = response.getcode()
@@ -47,7 +47,7 @@ except Exception as e:
     st.text(str(e))
     st.stop()
 
-# 📌 결과 파싱
+#  결과 파싱
 data = result_json['results'][0]['data']
 dates = [item['period'] for item in data]
 ratios = [item['ratio'] for item in data]
