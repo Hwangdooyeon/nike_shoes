@@ -58,6 +58,7 @@ df = pd.DataFrame({
     '날짜': pd.to_datetime(dates),
     '검색량 지수': ratios
 })
+# 날짜를 index로 설정함
 df = df.set_index('날짜')
 
 # 📌 Streamlit 시각화
