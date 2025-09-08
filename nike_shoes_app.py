@@ -61,7 +61,7 @@ df = pd.DataFrame({
 # 날짜를 index로 설정함
 df = df.set_index('날짜')
 
-# 📌 Streamlit 시각화
+#  Streamlit 시각화
 # https://docs.streamlit.io/ 제목 서식에 텍스트를 표시
 st.title("나이키운동화 검색어 트렌드 (2025년 8월)")
 
