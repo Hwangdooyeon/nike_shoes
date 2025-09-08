@@ -26,7 +26,9 @@ body = {
     "gender": ""
 }
 body_str = json.dumps(body)
-# JSON 문자열로 변환
+# body를 JSON 문자열로 변환
+# API 서버는 JSON 문자열을 받아야함  파이썬 키-값을 그대로 보낼 수 없음
+# json.dumps = 파이썬 dict 등을 JSON 문자열로 바꿔주는 함수.
 
 #  요청 구성
 url = "https://openapi.naver.com/v1/datalab/search"
@@ -52,7 +54,7 @@ except Exception as e:
     st.stop()
 
 #  결과 파싱
-data = result_json['results'][0]['data']
+data = result_json['results'][0]['data']  # 그룹(dict)별 
 dates = [item['period'] for item in data]
 ratios = [item['ratio'] for item in data]
 
