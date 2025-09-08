@@ -26,6 +26,7 @@ body = {
     "gender": ""
 }
 body_str = json.dumps(body)
+# JSON 문자열로 변환
 
 #  요청 구성
 url = "https://openapi.naver.com/v1/datalab/search"
@@ -41,6 +42,7 @@ try:
     if rescode == 200:
         response_body = response.read()
         result_json = json.loads(response_body.decode('utf-8'))
+#응답 바이트를 .decode('utf-8')로 문자열(str)로 변환(JSON은 보통 UTF-8)한 뒤 그 문자열을 json.loads로 파싱해 result_json에 담음
     else:
         st.error(f"API Error Code: {rescode}")
         st.stop()
