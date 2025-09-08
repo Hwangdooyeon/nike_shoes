@@ -58,6 +58,8 @@ data = result_json['results'][0]['data']  # 그룹(dict)별
 dates = [item['period'] for item in data]
 ratios = [item['ratio'] for item in data]
 
+# 각각 놓는건 위험 합쳐서 넣어보기
+
 # period = 구간별 시작 날짜(yyyy-mm-dd 형식)
 # ratio = 구간별 검색량의 상대적 비율. 구간별 결과에서 가장 큰 값을 100으로 설정한 상댓값 ( 비율(%)가 아니라 지수라서 100을 넘어가지 않음 )
 df = pd.DataFrame({
