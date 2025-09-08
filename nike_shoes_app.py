@@ -8,7 +8,7 @@ import urllib.request
 client_id = "q3Yd8CQkM7oHlqOzMeQL"
 client_secret = "hGWoNfAcAD"
 
-#  요청 바디 구성 (나이키운동화 + 2025년 8월 일별)
+# 바디 구성 (나이키운동화 + 2025년 8월 일별)
 body = {
     "startDate": "2025-08-01",
     "endDate": "2025-08-31",
