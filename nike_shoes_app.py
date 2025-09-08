@@ -40,8 +40,8 @@ request.add_header("Content-Type", "application/json")
 #  API 호출
 try:
     response = urllib.request.urlopen(request, data=body_str.encode("utf-8"))
-    rescode = response.getcode()
-    if rescode == 200:
+    rescode = response.getcode() # HTTP 상태 코드 확인
+    if rescode == 200: # 성공
         response_body = response.read()
         result_json = json.loads(response_body.decode('utf-8'))
 #응답 바이트를 .decode('utf-8')로 문자열(str)로 변환(JSON은 보통 UTF-8)한 뒤 그 문자열을 json.loads로 파싱해 result_json에 담음 
