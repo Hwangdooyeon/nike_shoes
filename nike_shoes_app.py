@@ -13,6 +13,7 @@ body = {
     "startDate": "2025-08-01",
     "endDate": "2025-08-31",
     "timeUnit": "date",
+     #일간 단위로
     "keywordGroups": [
         {
             "groupName": "나이키운동화",
