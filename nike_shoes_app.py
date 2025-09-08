@@ -54,10 +54,13 @@ data = result_json['results'][0]['data']
 dates = [item['period'] for item in data]
 ratios = [item['ratio'] for item in data]
 
+# period = 구간별 시작 날짜(yyyy-mm-dd 형식)
+# ratio = 구간별 검색량의 상대적 비율. 구간별 결과에서 가장 큰 값을 100으로 설정한 상댓값
 df = pd.DataFrame({
     '날짜': pd.to_datetime(dates),
     '검색량 지수': ratios
 })
+
 # 날짜를 index로 설정함
 df = df.set_index('날짜')
 
